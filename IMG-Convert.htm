@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online tool to enhance image quality to 2K, 4K, or 8K resolution with smart compression. Improve your photos instantly.">
+    <meta name="keywords" content="image upscaler, photo enhancer, 2k 4k 8k converter, image quality improver, photo resolution increase">
+    <meta name="author" content="Image Quality Enhancer">
+    <meta property="og:title" content="Image Quality Enhancer - Upscale to 2K, 4K, 8K">
+    <meta property="og:description" content="Enhance your image quality online for free. Convert to higher resolutions with smart compression.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="https://yourwebsite.com/preview.jpg">
+    <title>Image Quality Enhancer - Upscale to 2K, 4K, 8K | Free Online Tool</title>
+    <link rel="canonical" href="https://yourwebsite.com">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-color: #4a6bff;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b6b;
+            --text-color: #333;
+            --light-text: #777;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7ff;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--light-text);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .ad-banner {
+            background-color: #f1f3ff;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 20px auto;
+            text-align: center;
+            max-width: 970px;
+            min-height: 90px;
+        }
+
+        .tool-container {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .upload-area {
+            border: 2px dashed #ccc;
+            border-radius: var(--border-radius);
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 30px;
+        }
+
+        .upload-area:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(74, 107, 255, 0.05);
+        }
+
+        .upload-area i {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .upload-area p {
+            color: var(--light-text);
+        }
+
+        .upload-area.active {
+            border-color: var(--primary-color);
+            background-color: rgba(74, 107, 255, 0.05);
+        }
+
+        #file-input {
+            display: none;
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .control-group {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .control-group h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        select, input[type="range"] {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            background-color: white;
+            font-size: 1rem;
+        }
+
+        select:focus, input[type="range"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .range-value {
+            display: block;
+            text-align: center;
+            margin-top: 5px;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #3a5bef;
+            transform: translateY(-2px);
+        }
+
+        .btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #e9ecef;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .result-container {
+            display: none;
+            margin-top: 40px;
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .comparison {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .image-box {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .image-box h3 {
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+        }
+
+        .image-preview {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 10px;
+        }
+
+        .image-info {
+            display: flex;
+            justify-content: space-between;
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        .download-btn {
+            margin-top: 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .feature-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card i {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--light-text);
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .loading-spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid var(--primary-color);
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 15px;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .controls {
+                flex-direction: column;
+            }
+
+            .comparison {
+                flex-direction: column;
+            }
+
+            .image-box {
+                min-width: 100%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="/" class="logo">ImageQualityPro</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Enhance Your Image Quality</h1>
+            <p>Upscale your images to 2K, 4K, or 8K resolution with our advanced AI-powered tool. Perfect for photographers, designers, and social media enthusiasts.</p>
+            
+            <!-- Top Ad Banner -->
+            <div class="ad-banner">
+                <!-- Replace with your AdSense code -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </section>
+
+        <section class="tool-container">
+            <div class="upload-area" id="upload-area">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <h2>Drag & Drop Your Image Here</h2>
+                <p>or click to browse files (JPEG, PNG, WEBP supported)</p>
+                <input type="file" id="file-input" accept="image/jpeg, image/png, image/webp">
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <h3>Output Resolution</h3>
+                    <select id="resolution">
+                        <option value="2k">2K (2048×1080)</option>
+                        <option value="4k" selected>4K (3840×2160)</option>
+                        <option value="8k">8K (7680×4320)</option>
+                        <option value="custom">Custom Resolution</option>
+                    </select>
+                </div>
+
+                <div class="control-group" id="custom-resolution-group" style="display: none;">
+                    <h3>Custom Dimensions</h3>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="number" id="custom-width" placeholder="Width" min="100" style="flex: 1;">
+                        <input type="number" id="custom-height" placeholder="Height" min="100" style="flex: 1;">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <h3>Compression Level</h3>
+                    <input type="range" id="compression" min="0" max="100" value="50">
+                    <span class="range-value" id="compression-value">50% (Balanced Quality & Size)</span>
+                </div>
+
+                <div class="control-group">
+                    <h3>Enhancement Options</h3>
+                    <select id="enhancement">
+                        <option value="none">No Additional Enhancement</option>
+                        <option value="sharpness">Increase Sharpness</option>
+                        <option value="denoise">Reduce Noise</option>
+                        <option value="color">Enhance Colors</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="process-btn" class="btn" disabled>Enhance Image</button>
+                <button id="reset-btn" class="btn btn-secondary" disabled>Reset</button>
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="loading-spinner"></div>
+                <p>Processing your image... This may take a few moments</p>
+            </div>
+
+            <div class="result-container" id="result-container">
+                <div class="result-header">
+                    <h2>Enhanced Results</h2>
+                    <div class="image-info">
+                        <span>Processing time: <span id="processing-time">0</span>s</span>
+                    </div>
+                </div>
+
+                <div class="comparison">
+                    <div class="image-box">
+                        <h3>Original Image</h3>
+                        <img id="original-img" class="image-preview" src="" alt="Original image">
+                        <div class="image-info">
+                            <span id="original-size">0 KB</span>
+                            <span id="original-dimensions">0×0</span>
+                        </div>
+                    </div>
+
+                    <div class="image-box">
+                        <h3>Enhanced Image</h3>
+                        <img id="enhanced-img" class="image-preview" src="" alt="Enhanced image">
+                        <div class="image-info">
+                            <span id="enhanced-size">0 KB</span>
+                            <span id="enhanced-dimensions">0×0</span>
+                        </div>
+                        <button id="download-btn" class="btn download-btn">Download Enhanced Image</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Ad Banner -->
+            <div class="ad-banner" style="margin-top: 40px;">
+                <!-- Replace with your AdSense code -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="feature-card">
+                <i class="fas fa-expand"></i>
+                <h3>High-Quality Upscaling</h3>
+                <p>Increase your image resolution up to 8K without losing quality using our advanced algorithms.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-compress-arrows-alt"></i>
+                <h3>Smart Compression</h3>
+                <p>Optimize file size while maintaining visual quality with adjustable compression levels.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Fast Processing</h3>
+                <p>Get enhanced images in seconds with our cloud-powered processing technology.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-lock"></i>
+                <h3>Privacy Guaranteed</h3>
+                <p>Your images are processed securely and never stored on our servers permanently.</p>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="tool-container" style="margin-top: 30px;">
+            <h2 style="margin-bottom: 20px;">How It Works</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <div style="flex: 1; min-width: 250px;">
+                    <h3><i class="fas fa-upload" style="color: var(--primary-color); margin-right: 10px;"></i> Step 1: Upload</h3>
+                    <p style="margin-top: 10px;">Drag and drop your image or click to browse files from your device.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px;">
+                    <h3><i class="fas fa-sliders-h" style="color: var(--primary-color); margin-right: 10px;"></i> Step 2: Adjust Settings</h3>
+                    <p style="margin-top: 10px;">Select your desired resolution and compression level for optimal results.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px;">
+                    <h3><i class="fas fa-magic" style="color: var(--primary-color); margin-right: 10px;"></i> Step 3: Enhance</h3>
+                    <p style="margin-top: 10px;">Click the "Enhance Image" button and let our AI work its magic.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px;">
+                    <h3><i class="fas fa-download" style="color: var(--primary-color); margin-right: 10px;"></i> Step 4: Download</h3>
+                    <p style="margin-top: 10px;">Download your enhanced image in high quality, ready to use.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Ad Banner -->
+        <div class="ad-banner" style="margin: 40px auto;">
+            <!-- Replace with your AdSense code -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <section id="faq" class="tool-container" style="margin-top: 30px;">
+            <h2 style="margin-bottom: 20px;">Frequently Asked Questions</h2>
+            <div style="margin-top: 20px;">
+                <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee;">
+                    <h3 style="margin-bottom: 5px;">What image formats are supported?</h3>
+                    <p style="color: var(--light-text);">We support JPEG, PNG, and WEBP formats. For best results with high-resolution output, we recommend using PNG files.</p>
+                </div>
+                <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee;">
+                    <h3 style="margin-bottom: 5px;">Is there a file size limit?</h3>
+                    <p style="color: var(--light-text);">The maximum file size is 20MB. For larger files, consider compressing them first before enhancement.</p>
+                </div>
+                <div style="margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee;">
+                    <h3 style="margin-bottom: 5px;">How does the compression level affect quality?</h3>
+                    <p style="color: var(--light-text);">Lower compression preserves more quality but results in larger files. Higher compression reduces file size but may slightly affect image quality.</p>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <h3 style="margin-bottom: 5px;">Are my images stored on your servers?</h3>
+                    <p style="color: var(--light-text);">No, we process your images temporarily and automatically delete them after 1 hour. We don't keep permanent copies of your files.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ImageQualityPro</h3>
+                    <p style="color: #ccc; margin-top: 10px;">The ultimate online tool for enhancing your images to professional quality standards.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/cookies">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="mailto:support@imagequalitypro.com">support@imagequalitypro.com</a></li>
+                        <li><a href="/contact">Contact Form</a></li>
+                        <li><a href="/feedback">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ImageQualityPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM elements
+            const uploadArea = document.getElementById('upload-area');
+            const fileInput = document.getElementById('file-input');
+            const processBtn = document.getElementById('process-btn');
+            const resetBtn = document.getElementById('reset-btn');
+            const resolutionSelect = document.getElementById('resolution');
+            const customResolutionGroup = document.getElementById('custom-resolution-group');
+            const compressionSlider = document.getElementById('compression');
+            const compressionValue = document.getElementById('compression-value');
+            const loadingElement = document.getElementById('loading');
+            const resultContainer = document.getElementById('result-container');
+            const originalImg = document.getElementById('original-img');
+            const enhancedImg = document.getElementById('enhanced-img');
+            const originalSize = document.getElementById('original-size');
+            const enhancedSize = document.getElementById('enhanced-size');
+            const originalDimensions = document.getElementById('original-dimensions');
+            const enhancedDimensions = document.getElementById('enhanced-dimensions');
+            const downloadBtn = document.getElementById('download-btn');
+            const processingTime = document.getElementById('processing-time');
+            
+            // Variables
+            let selectedFile = null;
+            let startTime = 0;
+            
+            // Event listeners
+            uploadArea.addEventListener('click', () => fileInput.click());
+            
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadArea.classList.add('active');
+            });
+            
+            uploadArea.addEventListener('dragleave', () => {
+                uploadArea.classList.remove('active');
+            });
+            
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadArea.classList.remove('active');
+                
+                if (e.dataTransfer.files.length) {
+                    handleFileSelection(e.dataTransfer.files[0]);
+                }
+            });
+            
+            fileInput.addEventListener('change', () => {
+                if (fileInput.files.length) {
+                    handleFileSelection(fileInput.files[0]);
+                }
+            });
+            
+            resolutionSelect.addEventListener('change', () => {
+                if (resolutionSelect.value === 'custom') {
+                    customResolutionGroup.style.display = 'block';
+                } else {
+                    customResolutionGroup.style.display = 'none';
+                }
+            });
+            
+            compressionSlider.addEventListener('input', () => {
+                const value = compressionSlider.value;
+                let qualityText = '';
+                
+                if (value < 30) {
+                    qualityText = 'Maximum Quality (Large File)';
+                } else if (value < 70) {
+                    qualityText = 'Balanced Quality & Size';
+                } else {
+                    qualityText = 'Smaller File (Some Quality Loss)';
+                }
+                
+                compressionValue.textContent = `${value}% (${qualityText})`;
+            });
+            
+            processBtn.addEventListener('click', processImage);
+            resetBtn.addEventListener('click', resetTool);
+            downloadBtn.addEventListener('click', downloadImage);
+            
+            // Functions
+            function handleFileSelection(file) {
+                // Check file type
+                const validTypes = ['image/jpeg', 'image/png', 'image/webp'];
+                if (!validTypes.includes(file.type)) {
+                    alert('Please upload a valid image file (JPEG, PNG, or WEBP).');
+                    return;
+                }
+                
+                // Check file size (max 20MB)
+                if (file.size > 20 * 1024 * 1024) {
+                    alert('File size exceeds 20MB limit. Please choose a smaller file.');
+                    return;
+                }
+                
+                selectedFile = file;
+                
+                // Display file info
+                uploadArea.innerHTML = `
+                    <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                    <h2>${file.name}</h2>
+                    <p>${(file.size / 1024).toFixed(2)} KB</p>
+                `;
+                
+                // Enable buttons
+                processBtn.disabled = false;
+                resetBtn.disabled = false;
+                
+                // Preview original image
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    originalImg.src = e.target.result;
+                    originalSize.textContent = `${(file.size / 1024).toFixed(2)} KB`;
+                    
+                    // Get image dimensions
+                    const img = new Image();
+                    img.onload = function() {
+                        originalDimensions.textContent = `${this.width}×${this.height}`;
+                    };
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+            
+            function processImage() {
+                if (!selectedFile) return;
+                
+                // Show loading
+                loadingElement.style.display = 'block';
+                resultContainer.style.display = 'none';
+                startTime = performance.now();
+                
+                // Simulate processing (in a real app, this would be an API call)
+                setTimeout(() => {
+                    // Hide loading
+                    loadingElement.style.display = 'none';
+                    
+                    // Calculate processing time
+                    const endTime = performance.now();
+                    const timeTaken = (endTime - startTime) / 1000;
+                    processingTime.textContent = timeTaken.toFixed(2);
+                    
+                    // In a real implementation, you would receive the processed image from your backend
+                    // For this demo, we'll just use the original image with some mock data
+                    enhancedImg.src = originalImg.src;
+                    enhancedDimensions.textContent = getOutputDimensions();
+                    
+                    // Calculate mock file size based on compression
+                    const compressionRatio = 1 - (compressionSlider.value / 200); // Simple mock calculation
+                    const originalSizeKB = selectedFile.size / 1024;
+                    const enhancedSizeKB = originalSizeKB * (resolutionSelect.value === '8k' ? 2.5 : 
+                                         resolutionSelect.value === '4k' ? 1.8 : 1.2) * compressionRatio;
+                    enhancedSize.textContent = `${enhancedSizeKB.toFixed(2)} KB`;
+                    
+                    // Show results
+                    resultContainer.style.display = 'block';
+                    
+                    // Scroll to results
+                    resultContainer.scrollIntoView({ behavior: 'smooth' });
+                }, 2000);
+            }
+            
+            function getOutputDimensions() {
+                if (resolutionSelect.value === 'custom') {
+                    const width = document.getElementById('custom-width').value || 3840;
+                    const height = document.getElementById('custom-height').value || 2160;
+                    return `${width}×${height}`;
+                }
+                
+                switch(resolutionSelect.value) {
+                    case '2k': return '2048×1080';
+                    case '4k': return '3840×2160';
+                    case '8k': return '7680×4320';
+                    default: return '3840×2160';
+                }
+            }
+            
+            function downloadImage() {
+                if (!enhancedImg.src) return;
+                
+                // Create a temporary link
+                const link = document.createElement('a');
+                link.href = enhancedImg.src;
+                link.download = `enhanced_${selectedFile.name}`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+            
+            function resetTool() {
+                // Reset file input
+                fileInput.value = '';
+                selectedFile = null;
+                
+                // Reset upload area
+                uploadArea.innerHTML = `
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h2>Drag & Drop Your Image Here</h2>
+                    <p>or click to browse files (JPEG, PNG, WEBP supported)</p>
+                `;
+                
+                // Reset buttons
+                processBtn.disabled = true;
+                resetBtn.disabled = true;
+                
+                // Reset settings
+                resolutionSelect.value = '4k';
+                customResolutionGroup.style.display = 'none';
+                compressionSlider.value = 50;
+                compressionValue.textContent = '50% (Balanced Quality & Size)';
+                
+                // Hide results
+                resultContainer.style.display = 'none';
+                loadingElement.style.display = 'none';
+                
+                // Clear images
+                originalImg.src = '';
+                enhancedImg.src = '';
+                originalSize.textContent = '0 KB';
+                enhancedSize.textContent = '0 KB';
+                originalDimensions.textContent = '0×0';
+                enhancedDimensions.textContent = '0×0';
+            }
+        });
+    </script>
+
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Image Quality Enhancer",
+      "url": "https://yourwebsite.com",
+      "description": "Free online tool to enhance image quality to 2K, 4K, or 8K resolution with smart compression.",
+      "applicationCategory": "ImageEditor",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "ImageQualityPro"
+      }
+    }
+    </script>
+</body>
+</html>
